@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El pollo Loco</title>
+    <!-- STYLESHEET  -->
+    <link rel="stylesheet" href="./style/game.css" />
+    <link rel="stylesheet" href="./fonts.css" />
+    <!-- JAVASCRIPT  -->
+    <script src="./models/drawable-object.class.js"></script>
+    <script src="./models/moveable-object.class.js"></script>
+
+    <script src="./models/chicken.class.js"></script>
+    <script src="./models/character.class.js"></script>
+    <script src="./models/bar-health.class.js"></script>
+    <script src="./models/bar-bottles.class.js"></script>
+    <script src="./models/bar-coin.class.js"></script>
+    <script src="./models/bar-endboss-health.class.js"></script>
+    <script src="./models/world.class.js"></script>
+    <script src="./models/background-object.class.js"></script>
+    <script src="./models/cloud.class.js"></script>
+    <script src="./models/coins.class.js"></script>
+    <script src="./models/bottle.class.js"></script>
+    <script src="./models/level.class.js"></script>
+    <script src="./models/throwable-object.class.js"></script>
+    <script src="./models/endboss.class.js"></script>
+    <script src="./levels/level1.js"></script>
+    <script src="./models/keyboard.class.js"></script>
+    <script src="./js/game.js"></script>
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="./img/favicon/favicon_game.png">
+</head>
+
+<body>
+    <div class="main-container">
+        <div>
+            <h1>EL pollo Loco</h1>
+        </div>
+        <div id="applyFullscreen">
+            <div class="canvas-container d-none" id="canvasContainer">
+                <canvas id="canvas" width="720" height="480"></canvas>
+
+                <div onclick="toggleMusic()">
+                    <img id="speaker" class="music-speaker" src="./img/icons/sound_on.svg" alt="Music on">
+                </div>
+                <div onclick="toggleFullscreen()" class="fullscreen-container">
+                    <img src="./img/icons/fullscreen.svg" alt="">
+                </div>
+
+
+                <div class="hud">
+                    <div class="mobile-buttons">
+                        <div class="buttons">
+                            <button class="mobile-steering" id="btnLeft"><img
+                                    src="./img/mobile_movement_buttons/moveLeft.svg" alt=""></button>
+                            <button class="mobile-steering" id="btnRight"><img
+                                    src="./img/mobile_movement_buttons/moveRight.svg" alt=""></button>
+                        </div>
+                        <div class="buttons">
+                            <button class="mobile-steering" id="btnUp"><img src="./img/mobile_movement_buttons/jump.svg"
+                                    alt=""></button>
+                            <button class="mobile-steering" id="btnThrow"><img
+                                    src="./img/mobile_movement_buttons/throwBottle.svg" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="gameover d-none" id="youLost">
+                    <button onclick="restart()" class="start-button">Restart</button>
+                    <img src="img/9_intro_outro_screens/game_over/oh no you lost!.png">
+                </div>
+
+                <div class="you-win d-none" id="youWin">
+                    <button onclick="restart()" class="start-button">Restart</button>
+                    <img src="img/9_intro_outro_screens/win/win_2.png">
+                </div>
+
+            </div>
+
+            <div id="startscreen" class="startscreen">
+                <button onclick="startGame()" class="start-button">Start</button>
+                <img src="img/9_intro_outro_screens/start/startscreen_1.png">
+
+                <div class="directions">
+                    <p>Movement: WASD or Arrow Keys</p>
+                    <p>Jump: Space</p>
+                    <p>Throw Bottle: F or CTRL</p>
+                </div>
+                <div onclick="toggleFullscreen()" class="fullscreen-container-startmenu">
+                    <img src="./img/icons/fullscreen.svg" alt="">
+                </div>
+            </div>
+            <div class="rotate">
+                <p>PLEASE ROTATE YOUR PHONE</p>
+            </div>
+        </div>
+        <div class="footer-container">
+            <div class="privacy-policy-container">
+                <a class="privacy-policy" href="privacy-policy.html">Datenschutz</a>
+            </div>
+            <div class="privacy-policy-container">
+                <a class="privacy-policy" href="impressum.html">Impressum</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

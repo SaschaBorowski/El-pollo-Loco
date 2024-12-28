@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%; /* Passt die Breite flexibel an */
+    max-width: 1920px; /* Setzt eine maximale Breite für große Bildschirme */
+    min-height: 100vh; /* Stellt sicher, dass die Container-Höhe mindestens der Höhe des Viewports entspricht */
+}
+
+p {
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 32px;
+    margin-top: 24px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 24px;
+}
+
+h3 {
+    font-size: 20px;
+    margin-top: 24px;
+}
+
+h4 {
+    font-size: 16px;
+    margin-top: 24px;
+}
+
+.arrow-container {
+    display:flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 8px;
+}
+.arrow {
+    height: 44px;
+}
